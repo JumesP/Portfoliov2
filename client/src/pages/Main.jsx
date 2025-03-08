@@ -10,6 +10,12 @@ import youtube from "../images/logos/youtube.png";
 import twitter from "../images/logos/twitter.png";
 import stackoverflow from "../images/logos/stackoverflow.png";
 
+const linkedinLink = "https://www.linkedin.com/in/james-price-806032186/";
+const githubLink = "https://github.com/JumesP";
+const youtubeLink = "https://www.youtube.com/@Jumescode";
+const twitterLink = "https://twitter.com/JumesCode";
+const stackoverflowLink = "https://stackoverflow.com/users/22334846/jumes";
+
 const Main = () => {
 	return (
 		<div className="MainContent">
@@ -39,27 +45,27 @@ const Main = () => {
 			
 			<div className="link-box">
 				<a
-					href="https://shorturl.at/dzBIV"
+					href={linkedinLink}
 					target="_blank"
 					className="links linkedin"
 				>
 					<img src={linkedin} alt="linkedin" className="link-img" />
 				</a>
-				<a href="https://github.com/JumesP" target="_blank" className="links">
+				<a href={githubLink} target="_blank" className="links">
 					<img src={github} alt="github" className="link-img" />
 				</a>
 				<a
-					href="https://www.youtube.com/@Jumescode"
+					href={linkedinLink}
 					target="_blank"
 					className="links"
 				>
 					<img src={youtube} alt="youtube" className="link-img" />
 				</a>
-				<a href="https://twitter.com/JumesCode" target="_blank" class="links">
+				<a href={twitterLink} target="_blank" class="links">
 					<img src={twitter} alt="twitter" className="link-img" />
 				</a>
 				<a
-					href="https://stackoverflow.com/users/22334846/jumes"
+					href={stackoverflowLink}
 					target="_blank"
 					className="links"
 				>
