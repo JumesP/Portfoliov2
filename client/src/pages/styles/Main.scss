@@ -110,3 +110,28 @@ section.blob-box {
     grid-area: 2 / 2 / 2 / 2;
 
 }
+
+// Media Queries
+
+// at 1000px width, grid changes to flex
+@media screen and (max-width: 1000px) {
+    .Content {
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .ContentText {
+        grid-area: auto;
+    }
+
+    section.blob-box {
+        grid-area: auto;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .ContentText {
+        text-align: center;
+    }
+}
