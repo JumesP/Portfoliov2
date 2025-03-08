@@ -36,8 +36,7 @@ const Main = () => {
 					</p>
 				</div>
 			</div>
-
-			// Image Links
+			
 			<div className="link-box">
 				<a
 					href="https://shorturl.at/dzBIV"
