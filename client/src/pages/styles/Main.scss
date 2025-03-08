@@ -34,10 +34,6 @@ section.blob-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    //min-height: 10vh;
-    //min-width: 10vw;
-    //height: 200px;
-    //width: 200px;
 
     height: 100%;
 
@@ -47,24 +43,16 @@ section.blob-box {
 
 .blob {
     position: absolute;
-    //width: 200px;
-    //height: 200px;
-    //height: 100%;
     min-height: 100px;
-
     height: 100%;
-
     max-height: 100%;
     max-width: 100%;
-
     aspect-ratio: 1/1;
     padding: 0 20px 0 20px;
-    //transform: translate(-20px, 70px);
 }
 
 .blob:nth-child(2) {
     filter: blur(10px);
-    //transform: translate(-170px, 70px);
 }
 
 // links
