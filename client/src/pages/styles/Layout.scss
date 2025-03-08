@@ -1,0 +1,34 @@
+root {
+  margin: 0;
+}
+
+nav {
+  background-color: #333333;
+  //margin-bottom: 15px;
+  border-bottom: 5px black solid;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 10px 0;
+  margin: 0;
+}
+
+nav ul li {
+  padding: 0 10px 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav a:active {
+  color: red;
+}
