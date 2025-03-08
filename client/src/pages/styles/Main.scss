@@ -36,7 +36,6 @@ section.blob-box {
     align-items: center;
     //min-height: 10vh;
     //min-width: 10vw;
-    padding: 20px;
     //height: 200px;
     //width: 200px;
 
@@ -56,6 +55,7 @@ section.blob-box {
     max-width: 100%;
 
     aspect-ratio: 1/1;
+    padding: 0 20px 0 20px;
     //transform: translate(-20px, 70px);
 }
 
