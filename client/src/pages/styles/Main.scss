@@ -7,6 +7,11 @@
     --main-font: 'Poppins', sans-serif;
 }
 
+h1, h2, p {
+    font-family: var(--main-font);
+    color: var(--main-text-color);
+}
+
 .MainContent{
     background-color: #7091E6;
     flex: 1;
