@@ -12,8 +12,9 @@ h1, h2, p {
     color: var(--main-text-color);
 }
 
+
 .MainContent{
-    background-color: #7091E6;
+    background-color: var(--main-bg-color);
     flex: 1;
 }
 
