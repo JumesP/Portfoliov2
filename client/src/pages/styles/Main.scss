@@ -32,13 +32,11 @@ h1, h2, p {
     font-size: 6em;
     font-weight: 600;
     margin-bottom: 10px;
-    max-width: 90%;
 }
 
 .Description {
     font-size: 2em;
     margin-bottom: 10px;
-    max-width: 90%;
 }
 
 //blob
@@ -136,6 +134,11 @@ section.blob-box {
     section.blob-box {
         grid-area: auto;
     }
+
+    .Heading, .Description {
+        max-width: 90%;
+    }
+
 }
 
 @media screen and (max-width: 850px) {
