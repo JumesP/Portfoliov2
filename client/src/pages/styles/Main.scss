@@ -143,3 +143,9 @@ section.blob-box {
         text-align: center;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .ContentText {
+        display: none;
+    }
+}
