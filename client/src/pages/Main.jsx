@@ -55,7 +55,7 @@ const Main = () => {
 					<img src={github} alt="github" className="link-img" />
 				</a>
 				<a
-					href={linkedinLink}
+					href={youtubeLink}
 					target="_blank"
 					className="links"
 				>
