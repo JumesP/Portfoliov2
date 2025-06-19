@@ -1,0 +1,19 @@
+:root {
+  --main-bg-color: #537D5D;
+  --main-bg-color-2: #73946B;
+  --main-bg-color-3: #9EBC8A;
+  --main-bg-color-4: #D2D0A0;
+  --main-text-color: black;
+  --main-font: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  width: 100vw;
+  max-height: fit-content;
+}
+
+h1, h2, p {
+  font-family: var(--main-font), sans-serif;
+  color: var(--main-text-color);
+}
