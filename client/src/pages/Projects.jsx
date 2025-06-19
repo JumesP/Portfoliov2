@@ -6,7 +6,7 @@ import blob from "../images/blob/blob.svg";
 
 const Projects = () => {
 	const githubUsername = process.env.REACT_APP_GITHUB_USERNAME || "JumesP"; // Replace with your GitHub username
-	const githubToken = process.env.REACT_APP_GITHUB_TOKEN;
+	const githubToken = process.env.REACT_APP_GITHUB_TOKEN; // DOESNT WORK
 
 	console.log("GitHub Username:", githubUsername, "GitHub Token:", githubToken ? "Configured" : "Not Configured");
 	const [repos, setRepos] = useState([]);
