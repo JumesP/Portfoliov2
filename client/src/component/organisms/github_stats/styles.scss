@@ -1,0 +1,708 @@
+/* Github Stats Component Styles */
+.github-stats-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--main-bg-color-2);
+  border-radius: 12px;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: linear-gradient(45deg, var(--main-bg-color-3), var(--main-bg-color-4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+    color: var(--main-text-color);
+    text-align: center;
+  }
+
+  .github-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .loading, .error {
+    text-align: center;
+    padding: 1rem;
+    font-style: italic;
+  }
+
+  .error {
+    color: #ff6b6b;
+  }
+
+  // Token notice message
+  .token-notice {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    .token-instructions {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+
+      a {
+        color: var(--main-bg-color-4);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // GitHub tabs navigation
+  .github-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .github-tab {
+      padding: 0.7rem 1.5rem;
+      background-color: var(--main-bg-color);
+      border: none;
+      border-radius: 30px;
+      color: var(--main-text-color);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+
+      &:hover {
+        background-color: var(--main-bg-color-3);
+        transform: translateY(-2px);
+      }
+
+      &.active {
+        background-color: var(--main-bg-color-4);
+        transform: translateY(-2px);
+        font-weight: bold;
+      }
+    }
+  }
+
+  // Project subsection tabs
+  .project-subtabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+
+    .project-subtab {
+      padding: 0.5rem 1rem;
+      background-color: var(--main-bg-color);
+      border: none;
+      border-radius: 20px;
+      color: var(--main-text-color);
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--main-bg-color-3);
+      }
+
+      &.active {
+        background-color: var(--main-bg-color-4);
+        font-weight: bold;
+      }
+    }
+  }
+
+  // Section content container
+  .section-content {
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease;
+  }
+
+  // Language bars styles
+  .language-bars {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .language-bar-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      animation: slideIn 0.6s ease forwards;
+      opacity: 0;
+      transform: translateX(-20px);
+
+      &:nth-child(1) { animation-delay: 0.1s; }
+      &:nth-child(2) { animation-delay: 0.2s; }
+      &:nth-child(3) { animation-delay: 0.3s; }
+      &:nth-child(4) { animation-delay: 0.4s; }
+      &:nth-child(5) { animation-delay: 0.5s; }
+      &:nth-child(6) { animation-delay: 0.6s; }
+      &:nth-child(7) { animation-delay: 0.7s; }
+      &:nth-child(8) { animation-delay: 0.8s; }
+      &:nth-child(9) { animation-delay: 0.9s; }
+      &:nth-child(10) { animation-delay: 1s; }
+    }
+
+    .language-name {
+      width: 120px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-align: right;
+      padding-right: 1rem;
+      color: var(--main-text-color);
+    }
+
+    .language-bar {
+      flex-grow: 1;
+      height: 12px;
+      background: var(--main-bg-color);
+      border-radius: 6px;
+      overflow: hidden;
+
+      .language-progress {
+        height: 100%;
+        background: linear-gradient(90deg, var(--main-bg-color-3), var(--main-bg-color-4));
+        border-radius: 6px;
+        transition: width 1s ease-out;
+      }
+    }
+
+    .language-percentage {
+      width: 50px;
+      padding-left: 1rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: var(--main-text-color);
+    }
+  }
+
+  // Repository stats grid
+  .repo-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+
+    .repo-stat-card {
+      background-color: var(--main-bg-color);
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .stat-value {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: var(--main-bg-color-4);
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        color: var(--main-text-color);
+      }
+    }
+  }
+
+  // Activity section
+  .activity-section {
+    .contribution-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+
+      .contribution-stat-card {
+        background-color: var(--main-bg-color);
+        border-radius: 10px;
+        padding: 1.5rem;
+        text-align: center;
+        width: 180px;
+
+        .stat-value {
+          font-size: 2rem;
+          font-weight: bold;
+          color: var(--main-bg-color-4);
+        }
+
+        .stat-label {
+          margin-top: 0.5rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .contribution-chart {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      height: 180px;
+      margin: 0 auto 3rem;
+
+      .month-bar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% / 6 - 10px);
+        height: 100%;
+
+        .month-name {
+          font-size: 0.8rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .month-bar {
+          width: 30px;
+          height: 80%;
+          background-color: var(--main-bg-color);
+          border-radius: 4px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column-reverse;
+
+          .month-progress {
+            width: 100%;
+            background-color: var(--main-bg-color-4);
+            border-radius: 4px 4px 0 0;
+            transition: height 1s ease-out;
+          }
+        }
+
+        .month-count {
+          margin-top: 0.5rem;
+          font-size: 0.8rem;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .commit-timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      height: 180px;
+      margin: 0 auto;
+
+      .week-bar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% / 10 - 5px);
+        height: 100%;
+
+        .week-date {
+          font-size: 0.7rem;
+          margin-bottom: 0.5rem;
+          transform: rotate(-45deg);
+          white-space: nowrap;
+        }
+
+        .week-bar {
+          width: 15px;
+          height: 60%;
+          background-color: var(--main-bg-color);
+          border-radius: 4px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column-reverse;
+
+          .week-progress {
+            width: 100%;
+            background: linear-gradient(to top, var(--main-bg-color-3), var(--main-bg-color-4));
+            border-radius: 4px 4px 0 0;
+            transition: height 1s ease-out;
+          }
+        }
+
+        .week-count {
+          margin-top: 0.5rem;
+          font-size: 0.7rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  // Top projects section
+  .top-repos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .repo-card {
+      background-color: var(--main-bg-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateX(5px);
+      }
+
+      .repo-name {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+
+        a {
+          color: var(--main-text-color);
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            color: var(--main-bg-color-4);
+          }
+        }
+      }
+
+      .repo-description {
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .repo-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.8rem;
+
+        .repo-language, .repo-stars, .repo-forks, .repo-commits, .repo-updated {
+          display: flex;
+          align-items: center;
+          color: var(--main-text-color);
+
+          .language-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+          }
+
+          .star-icon, .fork-icon, .commits-icon, .time-icon {
+            margin-right: 5px;
+          }
+        }
+
+        .highlight {
+          color: var(--main-bg-color-4);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  // Latest commits styling
+  .latest-commits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .commit-card {
+      background-color: var(--main-bg-color);
+      border-radius: 8px;
+      padding: 1rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .commit-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+
+        .commit-repo {
+          font-weight: bold;
+          color: var(--main-text-color);
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            color: var(--main-bg-color-4);
+          }
+        }
+
+        .commit-time {
+          font-size: 0.8rem;
+          color: var(--main-bg-color-4);
+        }
+      }
+
+      .commit-message {
+        margin: 0.5rem 0;
+        font-style: italic;
+        color: var(--main-text-color);
+        line-height: 1.4;
+        font-size: 0.95rem;
+      }
+
+      .commit-author {
+        font-size: 0.8rem;
+        color: var(--main-text-color);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  // Repository section enhancements
+  .repo-stats-section {
+    h3 {
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    // Repository composition charts
+    .repo-composition {
+      margin: 2rem 0;
+
+      .composition-stats {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .composition-item {
+          flex: 1;
+          min-width: 280px;
+          max-width: 400px;
+
+          .composition-chart {
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            margin-bottom: 1rem;
+
+            .composition-segment {
+              height: 100%;
+              transition: width 0.5s ease-out;
+
+              &.public {
+                background-color: var(--main-bg-color-3);
+              }
+
+              &.private {
+                background-color: var(--main-bg-color-4);
+              }
+
+              &.original {
+                background-color: var(--main-bg-color-3);
+              }
+
+              &.forked {
+                background-color: var(--main-bg-color-4);
+              }
+            }
+          }
+
+          .composition-labels {
+            display: flex;
+            justify-content: space-around;
+
+            .composition-label {
+              display: flex;
+              align-items: center;
+              font-size: 0.9rem;
+
+              .label-dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                margin-right: 8px;
+
+                &.public, &.original {
+                  background-color: var(--main-bg-color-3);
+                }
+
+                &.private, &.forked {
+                  background-color: var(--main-bg-color-4);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Language distribution
+    .language-distribution {
+      margin: 3rem 0;
+
+      .distribution-intro {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .language-filter-tabs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+
+        .language-filter-btn {
+          padding: 0.4rem 0.8rem;
+          background-color: var(--main-bg-color);
+          border: none;
+          border-radius: 20px;
+          color: var(--main-text-color);
+          font-size: 0.8rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: var(--main-bg-color-3);
+            transform: translateY(-2px);
+          }
+
+          &.active {
+            background-color: var(--main-bg-color-4);
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    // Repository size statistics
+    .repo-size-stats {
+      margin: 3rem 0;
+
+      .size-metrics {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+
+        .size-metric-card {
+          background-color: var(--main-bg-color);
+          border-radius: 10px;
+          padding: 1.5rem;
+          min-width: 220px;
+          text-align: center;
+
+          .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--main-bg-color-4);
+            margin-bottom: 0.5rem;
+          }
+
+          .metric-label {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .size-extremes {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        .size-extreme-card {
+          background-color: var(--main-bg-color);
+          border-radius: 10px;
+          padding: 1.5rem;
+          min-width: 220px;
+          text-align: center;
+
+          .extreme-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+          }
+
+          .extreme-name {
+            color: var(--main-bg-color-4);
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          .extreme-size {
+            font-size: 0.9rem;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    // Repository age
+    .repo-age {
+      margin: 3rem 0;
+
+      .oldest-repo {
+        background-color: var(--main-bg-color);
+        border-radius: 10px;
+        padding: 1.5rem;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+
+        .oldest-label {
+          margin-bottom: 0.5rem;
+        }
+
+        .oldest-name {
+          color: var(--main-bg-color-4);
+          text-decoration: none;
+          font-size: 1.3rem;
+          font-weight: bold;
+          display: block;
+          margin-bottom: 0.5rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .oldest-date {
+          font-size: 0.9rem;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
