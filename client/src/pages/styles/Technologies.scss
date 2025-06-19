@@ -1,0 +1,697 @@
+.technologies-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: linear-gradient(45deg, var(--main-bg-color), var(--main-bg-color-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .tech-categories {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .category-btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      background-color: var(--main-bg-color-2);
+      color: var(--main-text-color);
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover, &.active {
+        background-color: var(--main-bg-color-4);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .tech-card {
+    background: var(--main-bg-color-2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+      .tech-icon {
+        transform: scale(1.1);
+      }
+
+      .skill-bar .progress {
+        width: 100% !important;
+        transition: width 1s ease-out;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(135deg, var(--main-bg-color), var(--main-bg-color-2));
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    .tech-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+      object-fit: contain;
+      background-color: white;
+      border-radius: 8px;
+      padding: 5px;
+    }
+
+    .tech-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: var(--main-text-color);
+    }
+
+    .skill-bar {
+      width: 100%;
+      height: 6px;
+      background-color: var(--main-bg-color);
+      border-radius: 3px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+
+      .progress {
+        height: 100%;
+        border-radius: 3px;
+        background: linear-gradient(90deg, var(--main-bg-color-3), var(--main-bg-color-4));
+        transition: width 0.5s ease-out;
+      }
+    }
+
+    .experience {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--main-text-color);
+    }
+  }
+
+  .animate-in {
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .github-stats-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: var(--main-bg-color-2);
+    border-radius: 12px;
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      background: linear-gradient(45deg, var(--main-bg-color-3), var(--main-bg-color-4));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin: 2rem 0 1rem;
+      color: var(--main-text-color);
+      text-align: center;
+    }
+
+    .github-intro {
+      text-align: center;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .loading, .error {
+      text-align: center;
+      padding: 1rem;
+      font-style: italic;
+    }
+
+    .error {
+      color: #ff6b6b;
+    }
+
+    // GitHub tabs navigation
+    .github-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      .github-tab {
+        padding: 0.7rem 1.5rem;
+        background-color: var(--main-bg-color);
+        border: none;
+        border-radius: 30px;
+        color: var(--main-text-color);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+
+        &:hover {
+          background-color: var(--main-bg-color-3);
+          transform: translateY(-2px);
+        }
+
+        &.active {
+          background-color: var(--main-bg-color-4);
+          transform: translateY(-2px);
+          font-weight: bold;
+        }
+      }
+    }
+
+    // Project subsection tabs
+    .project-subtabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+
+      .project-subtab {
+        padding: 0.5rem 1rem;
+        background-color: var(--main-bg-color);
+        border: none;
+        border-radius: 20px;
+        color: var(--main-text-color);
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--main-bg-color-3);
+        }
+
+        &.active {
+          background-color: var(--main-bg-color-4);
+          font-weight: bold;
+        }
+      }
+    }
+
+    // Section content container
+    .section-content {
+      max-width: 900px;
+      margin: 0 auto;
+      animation: fadeIn 0.5s ease;
+    }
+
+    // Language bars styles (already defined)
+    .language-bars {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .language-bar-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.8rem;
+        animation: slideIn 0.6s ease forwards;
+        opacity: 0;
+        transform: translateX(-20px);
+
+        &:nth-child(1) { animation-delay: 0.1s; }
+        &:nth-child(2) { animation-delay: 0.2s; }
+        &:nth-child(3) { animation-delay: 0.3s; }
+        &:nth-child(4) { animation-delay: 0.4s; }
+        &:nth-child(5) { animation-delay: 0.5s; }
+        &:nth-child(6) { animation-delay: 0.6s; }
+        &:nth-child(7) { animation-delay: 0.7s; }
+        &:nth-child(8) { animation-delay: 0.8s; }
+        &:nth-child(9) { animation-delay: 0.9s; }
+        &:nth-child(10) { animation-delay: 1s; }
+      }
+
+      .language-name {
+        width: 120px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-align: right;
+        padding-right: 1rem;
+        color: var(--main-text-color);
+      }
+
+      .language-bar {
+        flex-grow: 1;
+        height: 12px;
+        background: var(--main-bg-color);
+        border-radius: 6px;
+        overflow: hidden;
+
+        .language-progress {
+          height: 100%;
+          background: linear-gradient(90deg, var(--main-bg-color-3), var(--main-bg-color-4));
+          border-radius: 6px;
+          transition: width 1s ease-out;
+        }
+      }
+
+      .language-percentage {
+        width: 50px;
+        padding-left: 1rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: var(--main-text-color);
+      }
+    }
+
+    // Repository stats grid
+    .repo-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+
+      .repo-stat-card {
+        background-color: var(--main-bg-color);
+        border-radius: 10px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        .stat-value {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+          color: var(--main-bg-color-4);
+        }
+
+        .stat-label {
+          font-size: 0.9rem;
+          color: var(--main-text-color);
+        }
+      }
+    }
+
+    // Activity section
+    .activity-section {
+      .contribution-stats {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        .contribution-stat-card {
+          background-color: var(--main-bg-color);
+          border-radius: 10px;
+          padding: 1.5rem;
+          text-align: center;
+          width: 180px;
+
+          .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--main-bg-color-4);
+          }
+
+          .stat-label {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .contribution-chart {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 180px;
+        margin: 0 auto 3rem;
+
+        .month-bar-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: calc(100% / 6 - 10px);
+          height: 100%;
+
+          .month-name {
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .month-bar {
+            width: 30px;
+            height: 80%;
+            background-color: var(--main-bg-color);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column-reverse;
+
+            .month-progress {
+              width: 100%;
+              background-color: var(--main-bg-color-4);
+              border-radius: 4px 4px 0 0;
+              transition: height 1s ease-out;
+            }
+          }
+
+          .month-count {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .commit-timeline {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 180px;
+        margin: 0 auto;
+
+        .week-bar-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: calc(100% / 10 - 5px);
+          height: 100%;
+
+          .week-date {
+            font-size: 0.7rem;
+            margin-bottom: 0.5rem;
+            transform: rotate(-45deg);
+            white-space: nowrap;
+          }
+
+          .week-bar {
+            width: 15px;
+            height: 60%;
+            background-color: var(--main-bg-color);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column-reverse;
+
+            .week-progress {
+              width: 100%;
+              background: linear-gradient(to top, var(--main-bg-color-3), var(--main-bg-color-4));
+              border-radius: 4px 4px 0 0;
+              transition: height 1s ease-out;
+            }
+          }
+
+          .week-count {
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    // Top projects section
+    .top-repos-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .repo-card {
+        background-color: var(--main-bg-color);
+        border-radius: 8px;
+        padding: 1.5rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateX(5px);
+        }
+
+        .repo-name {
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          font-size: 1.3rem;
+
+          a {
+            color: var(--main-text-color);
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+              color: var(--main-bg-color-4);
+            }
+          }
+        }
+
+        .repo-description {
+          margin-bottom: 1rem;
+          font-size: 0.9rem;
+          opacity: 0.8;
+        }
+
+        .repo-stats {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          font-size: 0.8rem;
+
+          .repo-language {
+            display: flex;
+            align-items: center;
+
+            .language-dot {
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              margin-right: 5px;
+            }
+          }
+
+          .repo-stars, .repo-forks {
+            display: flex;
+            align-items: center;
+
+            .star-icon, .fork-icon {
+              margin-right: 5px;
+            }
+          }
+
+          .repo-updated {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    // Latest commits styling
+    .latest-commits-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .commit-card {
+        background-color: var(--main-bg-color);
+        border-radius: 8px;
+        padding: 1rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .commit-header {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.5rem;
+
+          .commit-repo {
+            font-weight: bold;
+            color: var(--main-text-color);
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+              color: var(--main-bg-color-4);
+            }
+          }
+
+          .commit-time {
+            font-size: 0.8rem;
+            color: var(--main-bg-color-4);
+          }
+        }
+
+        .commit-message {
+          margin: 0.5rem 0;
+          font-style: italic;
+          color: var(--main-text-color);
+          line-height: 1.4;
+          font-size: 0.95rem;
+        }
+
+        .commit-author {
+          font-size: 0.8rem;
+          color: var(--main-text-color);
+          opacity: 0.8;
+        }
+      }
+    }
+
+    // Mock data toggle button
+    .mock-data-toggle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.5rem;
+
+      .toggle-button {
+        background-color: var(--main-bg-color);
+        color: var(--main-text-color);
+        border: none;
+        padding: 0.5rem 1.2rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 0.5rem;
+
+        &:hover {
+          background-color: var(--main-bg-color-3);
+          transform: translateY(-2px);
+        }
+      }
+
+      .error {
+        font-size: 0.9rem;
+        color: #ff6b6b;
+        margin-top: 0.5rem;
+        max-width: 80%;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .tech-grid {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    .tech-card {
+      padding: 1rem;
+    }
+  }
+}
+
+// Add blob animations similar to Main page
+.blob-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+
+  .tech-blob {
+    position: absolute;
+    opacity: 0.2;
+    filter: blur(30px);
+    animation: float 8s ease-in-out infinite;
+
+    &:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      width: 300px;
+      height: 300px;
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      bottom: 10%;
+      right: 15%;
+      width: 350px;
+      height: 350px;
+      animation-delay: 1s;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
