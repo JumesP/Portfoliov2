@@ -10,12 +10,60 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  //height: 100vh;
   min-height: 100vh;
+  max-height: fit-content;
 }
 
 #root {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+// Global blob background that appears on all pages
+.global-blob-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+
+  .global-blob {
+    position: absolute;
+    opacity: 0.2;
+    filter: blur(30px);
+    animation: float 8s ease-in-out infinite;
+
+    &:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      width: 300px;
+      height: 300px;
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      bottom: 10%;
+      right: 15%;
+      width: 350px;
+      height: 350px;
+      animation-delay: 1s;
+    }
+  }
+}
+
+// Animation for the floating blobs
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 }
