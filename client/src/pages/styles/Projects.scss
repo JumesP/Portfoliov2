@@ -1,0 +1,121 @@
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+
+  h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	background: linear-gradient(45deg, var(--main-bg-color), var(--main-bg-color-3));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }
+
+  .intro {
+	text-align: center;
+	margin-bottom: 3rem;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.6;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1.5rem;
+    color: var(--main-bg-color);
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(to right, var(--main-bg-color), transparent);
+    }
+  }
+
+  section {
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .repository-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    margin-bottom: 4rem;
+  }
+
+  .stats-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+  }
+
+  .loading, .error {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+  }
+
+  .error {
+    color: #e74c3c;
+  }
+
+  // Decorative blobs
+  .blob {
+    position: absolute;
+    opacity: 0.4;
+    z-index: 1;
+
+    &.blob-1 {
+      top: 10%;
+      right: -150px;
+      width: 400px;
+      transform: rotate(20deg);
+      filter: hue-rotate(70deg);
+    }
+
+    &.blob-2 {
+      bottom: 5%;
+      left: -200px;
+      width: 500px;
+      transform: rotate(-30deg) scale(0.8);
+      filter: hue-rotate(170deg);
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .repository-section,
+    .stats-section {
+      padding: 1.5rem;
+    }
+
+    .blob {
+      opacity: 0.2;
+    }
+  }
+}
