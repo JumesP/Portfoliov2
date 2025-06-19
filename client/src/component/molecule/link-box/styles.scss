@@ -1,0 +1,46 @@
+// links
+.link-box {
+  position: fixed;
+  bottom: 3vw;
+  right: 3vw;
+  width: 95px;
+  height: 95px;
+  display: grid;
+  grid-template-columns: repeat(3, 25px);
+  grid-template-rows: repeat(3, 25px);
+  grid-gap: 10px;
+}
+
+.links, .link-img {
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+
+.link-img {
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: black;
+}
+
+.links:nth-child(1) {
+  grid-area: 3 / 3 / 3 / 3;
+}
+
+.links:nth-child(2) {
+  grid-area: 3 / 2 / 3 / 2;
+}
+
+.links:nth-child(3) {
+  grid-area: 3 / 1 / 3 / 1;
+}
+
+.links:nth-child(4) {
+  grid-area: 2 / 3 / 2 / 3;
+
+}
+
+.links:nth-child(5) {
+  grid-area: 2 / 2 / 2 / 2;
+
+}
