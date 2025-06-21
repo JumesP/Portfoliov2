@@ -1,11 +1,28 @@
 //@import ''; - for components
 
+:root {
+  --main-bg-color: #537D5D;
+  --main-bg-color-2: #73946B;
+  --main-bg-color-3: #9EBC8A;
+  --main-bg-color-4: #D2D0A0;
+  --main-text-color: black;
+  --main-font: 'Poppins', sans-serif;
+}
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   color: black;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 body {
@@ -15,10 +32,15 @@ body {
   max-height: fit-content;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+body {
+  background-color: var(--main-bg-color);
+  width: 100vw;
+  max-height: fit-content;
+}
+
+h1, h2, p {
+  font-family: var(--main-font), sans-serif;
+  color: var(--main-text-color);
 }
 
 // Global blob background that appears on all pages
