@@ -1,6 +1,6 @@
 import React from "react";
 import GithubStats from "../component/organisms/github_stats";
-import RepoCard from "../component/molecules/repo-card";
+import RepositoryList from "../component/organisms/repository-list";
 import "./styles/Projects.scss";
 import blob from "../images/blob/blob.svg";
 
@@ -19,8 +19,8 @@ const Projects = () => {
 			</p>
 
 			{/* GitHub Stats Component */}
-			<section className="stats-section">
-				<h2>GitHub Analytics</h2>
+			{/*<section className="stats-section">*/}
+			{/*	<h2>GitHub Analytics</h2>*/}
 				<GithubStats username={githubUsername} token={githubToken} />
 			{/*</section>*/}
 
