@@ -10,7 +10,7 @@ import Projects from "./pages/Projects";
 import Technologies from "./pages/Technologies";
 import Contact from "./pages/Contact";
 import ComingSoon from "./pages/ComingSoon";
-import LinkBox from "./component/molecule/link-box";
+import LinkBox from "./component/molecules/link-box";
 
 function App() {
 
