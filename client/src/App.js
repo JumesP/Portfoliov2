@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import './App.scss';
+import './global.scss';
 import blob from "./images/blob/blob.svg";
 
 import Layout from "./pages/Layout";
