@@ -9,6 +9,7 @@
   grid-template-columns: repeat(3, 25px);
   grid-template-rows: repeat(3, 25px);
   grid-gap: 10px;
+  z-index: 1000;
 }
 
 .links, .link-img {
