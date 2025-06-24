@@ -1,0 +1,119 @@
+.duelTimeline{
+	position: relative;
+	//width: 100%;
+	list-style: none;
+	background-color: var(--main-bg-color-2);
+	margin: 30px 20px;
+	padding: 20px;
+
+	display: flex;
+	flex-direction: row;
+
+	h2 {
+		text-align: center;
+	}
+
+	.leftTimeline {
+		width: 50%;
+
+		.timeline-event {
+			.timeline-event-content {
+				position: relative;
+				margin-right: 50px;
+				padding: 20px;
+				//background-color: var(--main-bg-color-3);
+				border-radius: 10px;
+				//box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+				margin-bottom: 20px;
+				text-align: right;
+
+				&::after {
+					content: '';
+					position: absolute;
+					right: -50px;
+					top: 32%;
+					transform: translateY(-50%);
+					width: 15px;
+					height: 15px;
+					background-color: var(--main-bg-color-4);
+					border-radius: 50%;
+					border: 3px solid var(--main-bg-color-2);
+				}
+
+				.timeline-event-title {
+					font-size: 1.5rem;
+					font-weight: bold;
+					color: var(--main-bg-color-4);
+				}
+
+				.timeline-event-description {
+					font-size: 1rem;
+					color: var(--text-secondary);
+				}
+
+				.timeline-event-date {
+					font-size: 0.9rem;
+					color: var(--text-secondary);
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+
+	&__divider {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		bottom: 0;
+		width: 5px;
+		transform: translateX(-50%);
+		background-color: var(--main-bg-color-3);
+		z-index: 1;
+	}
+
+	.rightTimeline {
+		width: 50%;
+
+		.timeline-event {
+			.timeline-event-content {
+				position: relative;
+				margin-left: 50px;
+				padding: 20px;
+				//background-color: var(--main-bg-color-3);
+				border-radius: 10px;
+				//box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+				margin-bottom: 20px;
+
+				&::before {
+					content: '';
+					position: absolute;
+					left: -50px;
+					top: 25.5%;
+					transform: translateY(-50%);
+					width: 15px;
+					height: 15px;
+					background-color: var(--main-bg-color-4);
+					border-radius: 50%;
+					border: 3px solid var(--main-bg-color-2);
+				}
+
+				.timeline-event-title {
+					font-size: 1.5rem;
+					font-weight: bold;
+					color: var(--main-bg-color-4);
+				}
+
+				.timeline-event-description {
+					font-size: 1rem;
+					color: var(--text-secondary);
+				}
+
+				.timeline-event-date {
+					font-size: 0.9rem;
+					color: var(--text-secondary);
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+}
