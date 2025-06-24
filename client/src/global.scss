@@ -43,6 +43,24 @@ h1, h2, p {
   color: var(--main-text-color);
 }
 
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(45deg, var(--main-bg-color), var(--main-bg-color-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
 // Global blob background that appears on all pages
 .global-blob-background {
   position: fixed;
