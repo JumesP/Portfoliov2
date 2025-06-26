@@ -8,7 +8,7 @@ const RepoCard = ({ repo }) => {
 
 	// Helper function to get image URL for a repository
 	const getRepoImage = (repoName) => {
-		return repoImages[repoName] || "/images/placeholders/repo-placeholder.jpg";
+		return repoImages[repoName] || null;
 	};
 
 	const formatDate = (dateString) => {
@@ -45,40 +45,40 @@ const RepoCard = ({ repo }) => {
 
 	return (
 		<>
-			{repoImage && (
-				<div className="repo-card" onClick={openModal}>
-					<div className="repo-image-container">
+			<div className="repo-card" onClick={openModal}>
+				<div className="repo-image-container">
+					{repoImage && (
 						<img
 							src={repoImage}
 							alt={`${repo.name} project screenshot`}
 							className="repo-image"
 						/>
+					)}
+				</div>
+				<div className="repo-header">
+					<div className="repo-logo">
+						<img src={githubLogo} alt="GitHub Logo" />
 					</div>
-					<div className="repo-header">
-						<div className="repo-logo">
-							<img src={githubLogo} alt="GitHub Logo" />
-						</div>
-						<h3 className="repo-name">{repo.name}</h3>
-					</div>
-					<div className="repo-info">
-						<p className="repo-description">{repo.description || "No description available"}</p>
-						<div className="repo-language">
+					<h3 className="repo-name">{repo.name}</h3>
+				</div>
+				<div className="repo-info">
+					<p className="repo-description">{repo.description || "No description available"}</p>
+					<div className="repo-language">
               <span
 				  className="language-dot"
 				  style={{ backgroundColor: repo.language ? getLanguageColor(repo.language) : '#cccccc' }}
 			  ></span>
-							<span>{repo.language || "No language"}</span>
-						</div>
-						<div className="repo-stats">
-							<span>⭐ {repo.stargazers_count}</span>
-							<span>🍴 {repo.forks_count}</span>
-						</div>
-						<div className="repo-updated">
-							Updated: {formatDate(repo.updated_at)}
-						</div>
+						<span>{repo.language || "No language"}</span>
+					</div>
+					<div className="repo-stats">
+						<span>⭐ {repo.stargazers_count}</span>
+						<span>🍴 {repo.forks_count}</span>
+					</div>
+					<div className="repo-updated">
+						Updated: {formatDate(repo.updated_at)}
 					</div>
 				</div>
-			)}
+			</div>
 
 			{showModal && (
 				<div className="repo-modal-overlay">
