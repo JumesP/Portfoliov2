@@ -49,12 +49,12 @@ const educationalTimelineEvents = [ // newest to oldest
 	{
 		title: "Third Year University Student",
 		date: "2024-9-24",
-		description: "Learning "
+		description: "Learning more advanced topics, including penetration testing, optimising network configutations, cloud computing solutions, cyber law and finally, my dissertation that focused on Researching and Designing a superior AI-Driven Personalisation Algorithm, designed to recommend products to users."
 	},
 	{
 		title: "Second Year of University",
 		date: "2023-9-24",
-		description: "More advanced understanding of coding, including designing algorithms in python, creating web apps using NodeJS and Express, and Object Orientated Programming in Java"
+		description: "More advanced understanding of coding, including designing algorithms in python, creating web apps using NodeJS and Express, Software Testing and Object Orientated Programming in Java"
 	},
 	{
 		title: "First Year of University",
