@@ -48,25 +48,25 @@ import DuelTimeline from "../component/molecules/duel_timeline";
 const educationalTimelineEvents = [ // newest to oldest
 	{
 		title: "Third Year University Student",
-		date: "September 2024 - May 2025",
+		date: "2024-9-24",
 		description: "Learning "
 	},
 	{
 		title: "Second Year of University",
-		date: "N/A",
-		description: "No events to display at this time."
+		date: "2023-9-24",
+		description: "More advanced understanding of coding, including designing algorithms in python, creating web apps using NodeJS and Express, and Object Orientated Programming in Java"
 	},
 	{
 		title: "First Year of University",
-		date: "N/A",
-		description: "No events to display at this time."
+		date: "2022-9-24",
+		description: "Getting a foundational understanding of coding basics like data structures and algorithms, as well as coding languages like Python and SQL"
 	}
 ];
 
-const professionalTimelineEvents = [ // newest to oldestå
+const professionalTimelineEvents = [ // newest to oldest
 	{
 		title: "Internship at Uniqodo",
-		date: "June 2024 - December 2024",
+		date: "2024-6-10",
 		description: "Learning real-world software development practices and contributing to projects. With a focus on WCAG compliance and accessibility, React components, version control and production environments."
 	}
 ];
