@@ -9,22 +9,25 @@ const Technologies = () => {
 
   // Sample tech stack data with reliable icon URLs
   const techStack = [
-    { name: 'JavaScript', category: 'frontend', level: 90, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg' },
-    { name: 'React', category: 'frontend', level: 85, experience: '1,5 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg' },
-    { name: 'HTML/CSS', category: 'frontend', level: 95, experience: '3 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg' },
-    { name: 'Tailwind CSS', category: 'frontend', level: 70, experience: '1 year', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg' },
-    { name: 'Python', category: 'backend', level: 65, experience: '3 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg' },
-    { name: 'MongoDB', category: 'database', level: 70, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg' },
-    { name: 'SQL', category: 'database', level: 80, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg'},
-    // { name: 'Docker', category: 'devops', level: 60, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg' },
-    { name: 'Azure', category: 'devops', level: 65, experience: '0.5 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg' },
-    { name: 'Git', category: 'tools', level: 75, experience: '2.5 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg' },
-    { name: 'TypeScript', category: 'frontend', level: 65, experience: '1 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg' },
-    // { name: 'Redux', category: 'frontend', level: 80, experience: '3 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg' },
-    { name: 'Node.js', category: 'backend', level: 80, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg' },
-    { name: 'Express', category: 'backend', level: 75, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg' },
-    // { name: 'GraphQL', category: 'backend', level: 65, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain.svg' },
-    { name: 'Figma', category: 'design', level: 50, experience: '1.5 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg' }
+    { name: 'JavaScript', category: 'frontend', level: 90, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg', isLanguage: true },
+    { name: 'React', category: 'frontend', level: 85, experience: '1,5 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg', isLanguage: false },
+    { name: 'HTML/CSS', category: 'frontend', level: 95, experience: '3 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg', isLanguage: false },
+    { name: 'Tailwind CSS', category: 'frontend', level: 70, experience: '1 year', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg', isLanguage: false },
+    { name: 'Python', category: 'backend', level: 65, experience: '3 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg', isLanguage: true },
+    { name: 'MongoDB', category: 'database', level: 70, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg', isLanguage: false },
+    { name: 'SQL', category: 'database', level: 80, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg', isLanguage: false },
+    // { name: 'Docker', category: 'devops', level: 60, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg', isLanguage: false },
+    { name: 'Azure', category: 'devops', level: 65, experience: '0.5 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg', isLanguage: false },
+    { name: 'Git', category: 'tools', level: 75, experience: '2.5 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg', isLanguage: false },
+    { name: 'TypeScript', category: 'frontend', level: 65, experience: '1 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg', isLanguage: true },
+    // { name: 'Redux', category: 'frontend', level: 80, experience: '3 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg', isLanguage: false },
+    { name: 'Node.js', category: 'backend', level: 80, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg', isLanguage: false },
+    { name: 'Express', category: 'backend', level: 75, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg', isLanguage: false },
+    // { name: 'GraphQL', category: 'backend', level: 65, experience: '2 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain.svg', isLanguage: false },
+    { name: 'Figma', category: 'design', level: 50, experience: '1.5 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg', isLanguage: false },
+    { name: 'Java', category: 'backend', level: 65, experience: '1.5 years', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg', isLanguage: true },
+    // { name: 'C#', category: 'backend', level: 60, experience: '1 year', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg', isLanguage: true },
+    { name: 'PHP', category: 'backend', level: 25, experience: '1 day', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg', isLanguage: true }
   ];
 
   const categories = [...new Set(techStack.map(tech => tech.category))];
@@ -32,9 +35,11 @@ const Technologies = () => {
   useEffect(() => {
     // Animate items on load and when filter changes
     const timer = setTimeout(() => {
-      setAnimatedItems(techStack.filter(tech =>
-        filter === 'all' || tech.category === filter
-      ).map(tech => tech.name));
+      setAnimatedItems(techStack.filter(tech => {
+        if (filter === 'all') return true;
+        if (filter === 'languages') return tech.isLanguage;
+        return tech.category === filter;
+      }).map(tech => tech.name));
     }, 100);
 
     return () => clearTimeout(timer);
@@ -79,11 +84,17 @@ const Technologies = () => {
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </button>
         ))}
+        <button
+          className={`category-btn ${filter === 'languages' ? 'active' : ''}`}
+          onClick={() => handleFilterChange('languages')}
+        >
+          Languages
+        </button>
       </div>
 
       <div className="tech-grid">
         {techStack
-          .filter(tech => filter === 'all' || tech.category === filter)
+          .filter(tech => filter === 'all' || tech.category === filter || (filter === 'languages' && tech.isLanguage))
           .map(tech => (
             <div
               key={tech.name}
