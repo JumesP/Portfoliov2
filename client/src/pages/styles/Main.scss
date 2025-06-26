@@ -10,6 +10,10 @@
 
 .ContentText {
     grid-area: 2 / 2 / 3 / 3;
+
+    & p {
+        line-height: 1.6;
+    }
 }
 
 .Heading {
@@ -17,11 +21,49 @@
     font-weight: 600;
     margin-bottom: 10px;
     text-align: left;
+    background: linear-gradient(45deg, #ffffff, #d3d3d3); /* White to light gray gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Adding subtle shadow for depth */
+    position: relative;
+    animation: nameEntrance 1.2s ease-out forwards;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px) scale(1.02);
+        background: linear-gradient(45deg, #ffffff, #f8d568);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes nameEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .Description {
     font-size: 2em;
     margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 //blob
