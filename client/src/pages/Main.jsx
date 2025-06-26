@@ -25,9 +25,9 @@ const Main = () => {
 				<div className="ContentText">
 					<h1 className="Heading">James Price</h1>
 					<h2 className="Description">University Student Learning to Code!</h2>
-					{/*<p className="Description">*/}
+					<p>
 						Click on the links above to navigate to other pages
-					{/*</p>*/}
+					</p>
 				</div>
 			</div>
 		</div>
