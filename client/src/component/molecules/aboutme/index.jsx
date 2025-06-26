@@ -6,7 +6,7 @@ const AboutMe = () => {
 	return (
 		<div className="aboutme">
 			<div className="left">
-				<img src="/images/projects/NihoLearn.jpg" alt="profile picture" />
+				<img src="/images/Linkedin_PFP.jpeg" alt="profile picture" />
 			</div>
 			<div className="right">
 				<h1>About Me</h1>
